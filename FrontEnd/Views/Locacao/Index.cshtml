@@ -1,0 +1,185 @@
+﻿@model CompleteDataViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    string state(int x)
+    {
+        return x == 0 ? "Disponivel" : "Alugado";
+    }
+    string date(DateTime dt)
+    {
+        return dt.ToString("dd/MM/yyyy");
+    }
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<div>
+    <h1>Locações</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Sobrenome
+                </th>
+                <th>
+                    Modelo
+                </th>
+                <th>
+                    Marca
+                </th>
+                <th>
+                    DataLocacao
+                </th>
+                <th>
+                    DataDevolucao
+                </th>
+                <th>
+                    Valor Total
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Locacoes)
+            {
+                <tr>
+
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </th>
+                    <th>
+                        @Model.Clientes.Where(c => c.Id == item.ClienteId).FirstOrDefault().Nome
+                    </th>
+                    <th>
+                        @Model.Clientes.Where(c => c.Id == item.ClienteId).FirstOrDefault().Sobrenome
+                    </th>
+                    <th>
+                        @Model.Carros.Where(c => c.Id == item.CarroId).FirstOrDefault().Modelo
+                    </th>
+                    <th>
+                        @Model.Carros.Where(c => c.Id == item.CarroId).FirstOrDefault().Marca
+                    </th>
+                    <th>
+                        @date(item.DataLocacao)
+                    </th>
+                    <th>
+                        @date(item.DataDevolucao)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.ValorTotal)
+                    </th>
+                    <th>
+                        @if (item.DataDevolucao < item.DataLocacao) @Html.ActionLink("Devolver", "Devolver", new { id = item.Id } ) 
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }) 
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <h1>Clientes</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Sobrenome
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Clientes)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Sobrenome)
+                    </th>
+                    <th>
+                        <a asp-controller="Cliente" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <h1>Carros</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Modelo
+                </th>
+                <th>
+                    Marca
+                </th>
+                <th>
+                    Preço Diária
+                </th>
+                <th>
+                    Preço Km
+                </th>
+                <th>
+                    Disponibilidade
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Carros)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Marca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrecoDiaria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrecoKM)
+                    </td>
+                    <th>
+                        @state((int)item.Estado)
+                    </th>
+                    <th>
+                        <a asp-controller="Carro" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

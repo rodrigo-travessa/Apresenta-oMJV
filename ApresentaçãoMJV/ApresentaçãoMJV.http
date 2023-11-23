@@ -1,0 +1,10 @@
+@ApresentaçãoMJV_HostAddress = http://localhost:5240
+
+GET {{ApresentaçãoMJV_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{ApresentaçãoMJV_HostAddress}}/api/carroapi/0
+
+###
