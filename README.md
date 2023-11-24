@@ -22,13 +22,14 @@ BackEnd - WEB API
 Models - Class Library (utility)
 DbAccess - Class Library (has the database connection logic)
 
+![Captura de tela 2023-11-24 112426](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/3f7fb7cc-1e21-4991-86d8-c8a675dbfaba)
+![Captura de tela 2023-11-24 112342](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/e6b1547d-2ff6-4ea1-b551-2680ff6657de)
+![Captura de tela 2023-11-24 112354](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/45ce9cdd-8d8a-4332-9cf4-6bb6df7fa804)
+![Captura de tela 2023-11-24 112412](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/42ea4658-f733-4a30-861a-93465ffd7923)
+![Captura de tela 2023-11-24 112420](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/bf5c4460-997f-4282-9f9e-05752f195ad5)
 
+![Captura de tela 2023-11-24 112303](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/60287493-f872-439f-90e5-22cdbb659590)
+
+![Captura de tela 2023-11-24 112439](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/e3965ebe-5ff4-40ff-b83a-039611a59973)
 ![Captura de tela 2023-11-24 112449](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/7a78ff60-f715-4ac7-ae0c-31b2f47ce2cc)
 ![Captura de tela 2023-11-24 112445](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/617f19d6-1480-4f5c-b494-8658788dd79c)
-![Captura de tela 2023-11-24 112439](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/e3965ebe-5ff4-40ff-b83a-039611a59973)
-![Captura de tela 2023-11-24 112426](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/3f7fb7cc-1e21-4991-86d8-c8a675dbfaba)
-![Captura de tela 2023-11-24 112420](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/bf5c4460-997f-4282-9f9e-05752f195ad5)
-![Captura de tela 2023-11-24 112412](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/42ea4658-f733-4a30-861a-93465ffd7923)
-![Captura de tela 2023-11-24 112354](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/45ce9cdd-8d8a-4332-9cf4-6bb6df7fa804)
-![Captura de tela 2023-11-24 112342](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/e6b1547d-2ff6-4ea1-b551-2680ff6657de)
-![Captura de tela 2023-11-24 112303](https://github.com/rodrigo-travessa/ApresentacaoMJV/assets/90840099/60287493-f872-439f-90e5-22cdbb659590)
